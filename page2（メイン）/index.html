@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAINBOW合同会社 | 世界の価値を日本へ、マーケティングの架け橋</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Noto+Sans+JP:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/philosophy.css">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+
+<body>
+
+    <div id="loader">
+        <div class="loader-bar"></div>
+    </div>
+
+    <nav class="fixed w-full z-50 px-6 lg:px-12 py-6 flex justify-between items-center text-white">
+        <a href="#" class="flex items-center gap-3">
+            <div class="w-10 h-10 flex items-center justify-center bg-white rounded-lg shadow-lg text-xl">🌈</div>
+            <span class="font-black text-2xl tracking-tighter uppercase" id="nav-logo-text">RAINBOW</span>
+        </a>
+
+        <div class="flex items-center gap-6">
+            <div class="lang-switch-wrapper">
+                <div class="lang-btn active" onclick="switchLang('ja')">JP</div>
+                <div class="lang-btn" onclick="switchLang('en')">EN</div>
+            </div>
+
+            <div class="hidden lg:flex gap-8 font-bold text-[10px] tracking-widest uppercase items-center">
+                <a href="#philosophy" class="nav-link lang" data-ja="企業理念" data-en="Philosophy">企業理念</a>
+                <a href="#service" class="nav-link lang" data-ja="事業内容" data-en="Business">事業内容</a>
+                <a href="#strength" class="nav-link lang" data-ja="強み" data-en="Strength">強み</a>
+                <a href="#company" class="nav-link lang" data-ja="会社概要" data-en="Company">会社概要</a>
+                <a href="#contact" class="bg-white text-black px-6 py-2 rounded-full hover:bg-gray-200 transition-colors lang" data-ja="お問い合わせ" data-en="Contact">お問い合わせ</a>
+            </div>
+
+            <button id="menu-open" class="lg:hidden text-2xl focus:outline-none">☰</button>
+        </div>
+    </nav>
+
+    <div id="mobile-menu">
+        <button id="menu-close" class="absolute top-8 right-8 text-4xl text-white">&times;</button>
+        <a href="#" class="text-white text-2xl font-bold lang" data-ja="トップ" data-en="Top">トップ</a>
+        <a href="#philosophy" class="text-white text-2xl font-bold lang" data-ja="企業理念" data-en="Philosophy">企業理念</a>
+        <a href="#service" class="text-white text-2xl font-bold lang" data-ja="事業内容" data-en="Business">事業内容</a>
+        <a href="#strength" class="text-white text-2xl font-bold lang" data-ja="強み" data-en="Strength">強み</a>
+        <a href="#company" class="text-white text-2xl font-bold lang" data-ja="会社概要" data-en="Company">会社概要</a>
+        <a href="#contact" class="text-white text-2xl font-bold lang" data-ja="お問い合わせ" data-en="Contact">お問い合わせ</a>
+    </div>
+
+  <section class="hero-visual flex items-center px-6 lg:px-24">
+        <video autoplay muted loop playsinline poster="video/night.mp4" class="hero-bg-video">
+            <source src="video/night.mp4" type="video/mp4">
+        </video>
+        <div class="hero-video-overlay"></div>
+
+        <div class="z-10 max-w-5xl relative">
+            <h2 class="text-white text-sm lg:text-lg font-bold tracking-[0.5em] mb-6 reveal uppercase lang" data-ja="価値あるモノを、最適なかたちで届ける" data-en="Delivering value in the best form">価値あるモノを、最適なかたちで届ける</h2>
+            <h1 class="text-white text-5xl lg:text-8xl font-black leading-tight mb-10 reveal">
+                <span class="lang" data-ja="良質なプロダクトを、" data-en="Quality Products">良質なプロダクトを、</span><br>
+                <span class="text-gradient lang" data-ja="明日の日常へ。" data-en="To Everyday Life.">明日の日常へ。</span>
+            </h1>
+            <p class="text-gray-300 text-base lg:text-xl max-w-2xl mb-12 reveal lang" data-ja="RAINBOWは、国内外の優れた製品を市場へ誠実に繋ぐマーケティングパートナーです。徹底したリサーチと戦略的なEC運用により、メーカー様の「想い」をエンドユーザーへと確実に届けます。" data-en="RAINBOW is a marketing partner that sincerely connects excellent domestic and international products to the market. Through thorough research and strategic EC operations, we ensure the manufacturers' passion reaches the end users.">
+                RAINBOWは、国内外の優れた製品を市場へ誠実に繋ぐマーケティングパートナーです。徹底したリサーチと戦略的なEC運用により、メーカー様の「想い」をエンドユーザーへと確実に届けます。
+            </p>
+
+            <div class="reveal mt-8">
+                <a href="#philosophy" class="btn-rainbow-glow">
+                    <span class="lang" data-ja="企業理念を見る" data-en="Our Philosophy">企業理念を見る</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="philosophy" class="py-32 px-6 lg:px-24">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-20 items-center">
+            <div class="lg:w-1/2 reveal">
+                <h3 class="text-xs font-black tracking-[0.4em] text-gray-400 mb-6 uppercase lang" data-ja="企業理念" data-en="Philosophy">企業理念</h3>
+                <h2 class="text-3xl lg:text-5xl font-black mb-8 leading-tight lang" data-ja="多彩な個性が共鳴し、<br>輝く市場を創る。" data-en="Creating a market where diverse individualities resonate and shine.">
+                    多彩な個性が共鳴し、<br>輝く市場を創る。
+                </h2>
+                <p class="text-gray-600 leading-loose mb-6 lang" data-ja="社名の「RAINBOW」には、異なる七色が調和して美しい弧を描くように、「様々な製品やブランドが持つ独自の個性を、虹のように輝かせたい」という強い意志が込められています。" data-en="The name 'RAINBOW' embodies our strong will to 'make the unique personalities of various products and brands shine like a rainbow,' just as seven different colors harmonize to create a beautiful arc.">
+                    社名の「RAINBOW」には、異なる七色が調和して美しい弧を描くように、「様々な製品やブランドが持つ独自の個性を、虹のように輝かせたい」という強い意志が込められています。
+                </p>
+                <p class="text-gray-600 leading-loose lang" data-ja="私たちは、日本の緻密なものづくり精神を軸に、世界の革新的な視点も取り入れながら、まだ見ぬ価値を最適な市場へと繋ぎます。メーカー・販売者・消費者の三者が幸福な関係で結ばれる「三方良し」の実現を通じて、関わる全ての個性が彩り豊かに輝く持続可能な未来を創造します。" data-en="Centered on the spirit of precise Japanese craftsmanship while incorporating innovative global perspectives, we connect unseen value to optimal markets. We strive to create a sustainable future where everyone shines by realizing 'Sanpo-yoshi'—satisfaction for the maker, the seller, and the consumer.">
+                    私たちは、日本の緻密なものづくり精神を軸に、世界の革新的な視点も取り入れながら、まだ見ぬ価値を最適な市場へと繋ぎます。メーカー・販売者・消費者の三者が幸福な関係で結ばれる「三方良し」の実現を通じて、関わる全ての個性が彩り豊かに輝く持続可能な未来を創造します。
+                </p>
+            </div>
+
+            <div class="lg:w-1/2 grid grid-cols-2 gap-4 reveal">
+                <div class="card-img-container">
+                    <img src="images/hito.png" alt="マーケットリサーチ" class="card-bg-img">
+                    <div class="card-overlay"></div>
+                    <div class="card-content">
+                        <h4 class="font-bold lang text-sm" data-ja="マーケットリサーチ" data-en="Market Research">マーケットリサーチ</h4>
+                    </div>
+                </div>
+                <div class="card-img-container">
+                    <img src="images/atukau.png" alt="ブランド保護" class="card-bg-img">
+                    <div class="card-overlay"></div>
+                    <div class="card-content">
+                        <h4 class="font-bold lang text-sm" data-ja="ブランド保護" data-en="Brand Protection">ブランド保護</h4>
+                    </div>
+                </div>
+                <div class="card-img-container">
+                    <img src="images/mirai.png" alt="国内EC最適化" class="card-bg-img">
+                    <div class="card-overlay"></div>
+                    <div class="card-content">
+                        <h4 class="font-bold lang text-sm" data-ja="開拓・挑戦" data-en="Pioneering & Challenge">開拓・挑戦</h4>
+                    </div>
+                </div>
+                <div class="card-img-container">
+                    <img src="images/te.png" alt="持続可能な共創" class="card-bg-img">
+                    <div class="card-overlay"></div>
+                    <div class="card-content">
+                        <h4 class="font-bold lang text-sm" data-ja="持続可能な共創" data-en="Co-creation">持続可能な共創</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="service" class="py-32 bg-gray-50 px-6 lg:px-24">
+        <div class="max-w-7xl mx-auto">
+            <div class="mb-20 reveal">
+                <h3 class="text-xs font-black tracking-[0.4em] text-gray-400 mb-6 uppercase lang" data-ja="事業内容" data-en="Services">事業内容</h3>
+                <h2 class="text-4xl lg:text-6xl font-black lang" data-ja="戦略的な販売ソリューション" data-en="Strategic Solutions">
+                    戦略的な販売ソリューション</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 reveal">
+                <div class="bg-white p-12 rounded-3xl shadow-sm hover:shadow-xl transition-shadow">
+                    <div class="w-16 h-16 bg-blue-50 flex items-center justify-center rounded-2xl mb-8 text-3xl">🏛️</div>
+                    <h4 class="text-xl font-bold mb-6 lang" data-ja="国内メーカーEC展開支援" data-en="Domestic Brand Support">
+                        国内メーカーEC展開支援</h4>
+                    <p class="text-gray-500 leading-relaxed lang" data-ja="Amazon・楽天市場・ヤフーショッピング等、国内主要モールの運用を代行。メーカー様のブランドイメージを守りつつ、売上の最大化を図ります。" data-en="We manage operations on major domestic malls like Amazon, Rakuten, and Yahoo! Shopping. We maximize sales while strictly protecting the manufacturer's brand image.">
+                        Amazon・楽天市場・ヤフーショッピング等、国内主要モールの運用を代行。メーカー様のブランドイメージを守りつつ、売上の最大化を図ります。
+                    </p>
+                </div>
+                <div class="bg-white p-12 rounded-3xl shadow-sm hover:shadow-xl transition-shadow">
+                    <div class="w-16 h-16 bg-green-50 flex items-center justify-center rounded-2xl mb-8 text-3xl">📈</div>
+                    <h4 class="text-xl font-bold mb-6 lang" data-ja="グローバル・マーケティング支援" data-en="Marketing Support">グローバル・マーケティング支援</h4>
+                    <p class="text-gray-500 leading-relaxed lang" data-ja="SNS運用からWeb広告、インフルエンサー施策まで、認知拡大からリピート購入に至るまでのカスタマージャーニーを一貫してデザインします。" data-en="From SNS operations and Web ads to influencer strategies, we design a consistent customer journey ranging from awareness expansion to repeat purchases.">
+                        SNS運用からWeb広告、インフルエンサー施策まで、認知拡大からリピート購入に至るまでのカスタマージャーニーを一貫してデザインします。
+                    </p>
+                </div>
+                <div class="bg-white p-12 rounded-3xl shadow-sm hover:shadow-xl transition-shadow">
+                    <div class="w-16 h-16 bg-purple-50 flex items-center justify-center rounded-2xl mb-8 text-3xl">🛡️</div>
+                    <h4 class="text-xl font-bold mb-6 lang" data-ja="海外メーカー輸入総代理店" data-en="Exclusive Agency">
+                        海外メーカー輸入総代理店</h4>
+                    <p class="text-gray-500 leading-relaxed lang" data-ja="世界各国の優れたメーカーの日本独占販売を担います。国内の法規制対応からブランディング、販路開拓まで、日本進出をトータルにサポートします。" data-en="We act as the exclusive distributor for excellent global manufacturers. We provide total support for market entry in Japan, including legal compliance, branding, and sales channel development.">
+                        世界各国の優れたメーカーの日本独占販売を担います。国内の法規制対応からブランディング、販路開拓まで、日本進出をトータルにサポートします。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="strength" class="py-32 px-6 lg:px-24">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-16">
+            <div class="lg:w-1/3 reveal">
+                <h3 class="text-xs font-black tracking-[0.4em] text-gray-400 mb-6 uppercase lang" data-ja="私たちの強み" data-en="Our Strength">私たちの強み</h3>
+                <h2 class="text-4xl font-black mb-8 lang" data-ja="選ばれる、<br>4つの理由" data-en="Why Choose<br>RAINBOW">
+                    選ばれる、<br>4つの理由</h2>
+            </div>
+            <div class="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-12 reveal">
+                <div>
+                    <span class="text-gradient text-4xl font-black mb-4 block">01</span>
+                    <h4 class="text-lg font-bold mb-4 lang" data-ja="独自のグローバルリサーチ" data-en="Global Sourcing">独自のグローバルリサーチ</h4>
+                    <p class="text-gray-500 text-sm leading-loose lang" data-ja="世界中の展示会や独自ルートを通じて、まだ日本に紹介されていない革新的なプロダクトをいち早く見出す圧倒的なリサーチ力を備えています。" data-en="We possess overwhelming research capabilities to quickly discover innovative products not yet introduced in Japan through global exhibitions and proprietary routes.">
+                        世界中の展示会や独自ルートを通じて、まだ日本に紹介されていない革新的なプロダクトをいち早く見出す圧倒的なリサーチ力を備えています。
+                    </p>
+                </div>
+                <div>
+                    <span class="text-gradient text-4xl font-black mb-4 block">02</span>
+                    <h4 class="text-lg font-bold mb-4 lang" data-ja="主要ECモールの高度な運用" data-en="Advanced EC Operations">主要ECモールの高度な運用</h4>
+                    <p class="text-gray-500 text-sm leading-loose lang" data-ja="プラットフォームごとに最適化されたSEO、クリエイティブ制作、価格戦略により、競合に埋もれない確実な販売実績を構築します。" data-en="We build solid sales records that stand out from competitors through SEO optimized for each platform, high-quality creative production, and strategic pricing.">
+                        プラットフォームごとに最適化されたSEO、クリエイティブ制作、価格戦略により、競合に埋もれない確実な販売実績を構築します。
+                    </p>
+                </div>
+                <div>
+                    <span class="text-gradient text-4xl font-black mb-4 block">03</span>
+                    <h4 class="text-lg font-bold mb-4 lang" data-ja="柔軟かつ強固な販路網" data-en="Flexible Sales Network">柔軟かつ強固な販路網</h4>
+                    <p class="text-gray-500 text-sm leading-loose lang" data-ja="オンラインからオフラインの実店舗まで、商品のフェーズやターゲット層に合わせて最適な販路を迅速に拡大・提供します。" data-en="We rapidly expand and provide optimal sales channels, from online to offline physical stores, tailored to the product's phase and target audience.">
+                        オンラインからオフラインの実店舗まで、商品のフェーズやターゲット層に合わせて最適な販路を迅速に拡大・提供します。
+                    </p>
+                </div>
+                <div>
+                    <span class="text-gradient text-4xl font-black mb-4 block">04</span>
+                    <h4 class="text-lg font-bold mb-4 lang" data-ja="一貫した物流・サポート" data-en="Integrated Support">一貫した物流・サポート</h4>
+                    <p class="text-gray-500 text-sm leading-loose lang" data-ja="輸入実務から国内配送、丁寧なカスタマーサポートまで内製化し、ブランド価値を損なわない高品質な体験を維持します。" data-en="We internalize everything from import procedures and logistics to customer support, maintaining a high-quality experience that upholds brand value.">
+                        輸入実務から国内配送、丁寧なカスタマーサポートまで内製化し、ブランド価値を損なわない高品質な体験を維持します。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <section id="company" class="py-32 bg-gray-50 px-6 lg:px-24">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <h3 class="text-xs font-black tracking-[0.4em] text-gray-400 mb-6 uppercase lang" data-ja="会社概要" data-en="Company Profile">会社概要</h3>
+                <h2 class="text-3xl lg:text-5xl font-black lang" data-ja="企業情報" data-en="Corporate Info">企業情報</h2>
+            </div>
+            <div class="bg-white p-8 lg:p-12 rounded-3xl shadow-sm reveal">
+                <dl class="space-y-8">
+                    <div class="flex flex-col md:flex-row border-b pb-4">
+                        <dt class="w-full md:w-1/3 text-gray-400 text-[10px] font-bold uppercase lang" data-ja="社名" data-en="Company Name">社名</dt>
+                        <dd class="w-full md:w-2/3 font-bold lang" data-ja="RAINBOW合同会社" data-en="RAINBOW LLC.">RAINBOW合同会社</dd>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row border-b pb-4">
+                        <dt class="w-full md:w-1/3 text-gray-400 text-[10px] font-bold uppercase lang" data-ja="代表取締役" data-en="Representative">代表取締役</dt>
+                        <dd class="w-full md:w-2/3 font-medium text-sm lang" data-ja="高多 優典" data-en="masanori takata">高多 優典</dd>
+                    </div>
+
+                    <div class="flex flex-col md:flex-row border-b pb-4">
+                        <dt class="w-full md:w-1/3 text-gray-400 text-[10px] font-bold uppercase lang" data-ja="設立" data-en="Established">設立</dt>
+                        <dd class="w-full md:w-2/3 font-bold lang" data-ja="2026年" data-en="February 2026">2026年</dd>
+                    </div>
+                    <div class="flex flex-col md:flex-row border-b pb-4">
+                        <dt class="w-full md:w-1/3 text-gray-400 text-[10px] font-bold uppercase lang" data-ja="所在地" data-en="Address">所在地</dt>
+                        <dd class="w-full md:w-2/3 font-medium text-sm lang" data-ja="石川県かほく市" data-en="Kahoku City, Ishikawa Prefecture">石川県かほく市</dd>
+                    </div>
+                    <div class="flex flex-col md:flex-row border-b pb-4">
+                        <dt class="w-full md:w-1/3 text-gray-400 text-[10px] font-bold uppercase lang" data-ja="主要取引銀行" data-en="Bank">主要取引銀行</dt>
+                        <dd class="w-full md:w-2/3 font-medium text-sm lang" data-ja="北國銀行、イオン銀行" data-en="Hokkoku Bank, AEON Bank">北國銀行、イオン銀行</dd>
+                    </div>
+                </dl>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-32 px-6 lg:px-24 bg-white">
+        <div class="max-w-3xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-4xl lg:text-6xl font-black mb-6 lang" data-ja="未来を、共に創る。" data-en="Let's build the future.">未来を、共に創る。</h2>
+                <p class="text-gray-500 lang" data-ja="お取引ご希望の企業様、製品のご提案など、お気軽にお問い合わせください。" data-en="Feel free to contact us for business partnerships, product proposals, or any other inquiries.">
+                    お取引ご希望の企業様、製品のご提案など、お気軽にお問い合わせください。
+                </p>
+            </div>
+
+            <form id="contact-form" class="space-y-10 reveal">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <div>
+                        <label class="block text-[10px] font-bold uppercase text-gray-400 mb-2 lang" data-ja="お名前" data-en="Name">お名前</label>
+                        <input type="text" class="form-input" placeholder="Name" required>
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-bold uppercase text-gray-400 mb-2 lang" data-ja="メールアドレス" data-en="Email">メールアドレス</label>
+                        <input type="email" class="form-input" placeholder="email@example.com" required>
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-[10px] font-bold uppercase text-gray-400 mb-2 lang" data-ja="メッセージ内容" data-en="Message">メッセージ内容</label>
+                    <textarea rows="3" class="form-input" placeholder="Message" required></textarea>
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="btn-modern w-full md:w-auto">
+                        <span class="lang" data-ja="この内容で送信する" data-en="SEND MESSAGE">この内容で送信する</span>
+                    </button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+   <footer class="bg-gray-900 text-white py-16 px-6 lg:px-24">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+            
+            <div>
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-8 h-8 flex items-center justify-center bg-white text-black rounded-lg shadow-lg text-lg">🌈</div>
+                    <span class="font-black text-xl tracking-tighter uppercase">RAINBOW</span>
+                </div>
+                <p class="text-gray-400 text-sm leading-relaxed lang" data-ja="良質なプロダクトを、明日の日常へ。<br>世界と日本を繋ぐ架け橋として。" data-en="Quality Products to Everyday Life.<br>A bridge connecting Japan and the world.">
+                    良質なプロダクトを、明日の日常へ。<br>世界と日本を繋ぐ架け橋として。
+                </p>
+            </div>
+
+            <div>
+                <h4 class="font-bold mb-6 text-gray-500 text-xs tracking-widest uppercase lang" data-ja="サイトマップ" data-en="Sitemap">サイトマップ</h4>
+                <ul class="space-y-4">
+                    <li><a href="#philosophy" class="hover:text-gray-300 transition-colors lang" data-ja="企業理念" data-en="Philosophy">企業理念</a></li>
+                    <li><a href="#service" class="hover:text-gray-300 transition-colors lang" data-ja="事業内容" data-en="Services">事業内容</a></li>
+                    <li><a href="#strength" class="hover:text-gray-300 transition-colors lang" data-ja="強み" data-en="Strength">強み</a></li>
+                    <li><a href="#company" class="hover:text-gray-300 transition-colors lang" data-ja="会社概要" data-en="Company Profile">会社概要</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-bold mb-6 text-gray-500 text-xs tracking-widest uppercase lang" data-ja="お問い合わせ・所在地" data-en="Contact & Address">お問い合わせ・所在地</h4>
+                <p class="mb-2 font-bold">RAINBOW LLC.</p>
+                <p class="text-gray-400 text-sm mb-6 lang" data-ja="〒929-1177<br>石川県かほく市" data-en="Kahoku City, Ishikawa Pref.<br>929-1177 Japan">
+                    〒929-1177<br>石川県かほく市
+                </p>
+                <a href="#contact" class="inline-block border border-gray-600 px-6 py-2 rounded-full text-sm hover:bg-white hover:text-black transition-all lang" data-ja="お問い合わせフォーム" data-en="Contact Form">
+                    お問い合わせフォーム
+                </a>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+            <p>&copy; 2026 RAINBOW LLC. All Rights Reserved.</p>
+            <div class="flex gap-6 mt-4 md:mt-0">
+                <a href="#" class="hover:text-white transition-colors lang" data-ja="プライバシーポリシー" data-en="Privacy Policy">プライバシーポリシー</a>
+                <a href="#" class="hover:text-white transition-colors lang" data-ja="特定商取引法に基づく表記" data-en="Legal Information">特定商取引法に基づく表記</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/common.js"></script>
+    <script src="js/contact.js"></script>
+</body>
+
+</html>
